@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Nav bar @CodingwithRK</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  
+  <style>
+    .side-nav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #023047;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 70px;
+    }
+
+    .side-nav a {
+      padding: 10px 10px 10px 40px;
+      text-decoration: none;
+      font-size: 25px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .side-nav a:hover {
+      color: #ffb703;
+    }
+
+    .side-nav .closeButton {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 40px;
+      margin-left: 60px;
+    }
+
+    .icon {
+      font-size:50px;
+      cursor: pointer;  
+    }
+
+    #page {
+      transition: margin-left .5s;
+      padding: 18px;
+      margin: 20px;
+      width: 70%;
+      text-align: justify;
+    }
+	
+    h2, p {
+      margin-left: 70px;
+      top:-65px;
+      position: relative;
+    }
+	
+	
+	@media screen and (max-height: 450px) {
+     .side-nav {padding-top: 15px;}
+     .side-nav a {font-size: 18px;}
+    }
+  </style>
+</head>
+<body>
+  <div id="sideNav" class="side-nav">
+    <a href="javascript:void(0)" class="closeButton" onclick="closeMenu()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div id="page">
+    <span class="icon" onclick="openMenu()">&#9776;</span>
+    <h2>Sidebar Menu</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
+  </div>
+
+  <script>
+    function openMenu() {
+      document.getElementById("sideNav").style.width = "260px";
+      document.getElementById("page").style.marginLeft = "260px";
+    }
+
+    function closeMenu() {
+      document.getElementById("sideNav").style.width = "0";
+      document.getElementById("page").style.marginLeft = "0px";
+    }
+  </script>
+</body>
+</html>
